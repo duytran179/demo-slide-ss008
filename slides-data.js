@@ -52,23 +52,23 @@ window.PresentationData = (() => {
   ];
 
   const comparisonTableHtml = `
-    <div class="matrix-scroll-guard rounded-xl border-2 border-slate-400 bg-white shadow-md">
-      <table class="pres-comp-table w-full text-left border-collapse border border-slate-400">
+    <div class="matrix-scroll-guard">
+      <table class="pres-comp-table">
         <thead>
-          <tr class="bg-slate-900 text-white">
-            <th class="font-extrabold text-amber-400 w-[23%] border border-slate-600">Tiêu chí so sánh</th>
-            <th class="font-extrabold text-rose-300 w-[38.5%] border border-slate-600">Kinh tế thị trường tư bản chủ nghĩa</th>
-            <th class="font-extrabold text-emerald-300 w-[38.5%] border border-slate-600">Kinh tế thị trường định hướng xã hội chủ nghĩa</th>
+          <tr>
+            <th class="th-criteria">Tiêu chí so sánh</th>
+            <th class="th-cap">Kinh tế thị trường tư bản chủ nghĩa</th>
+            <th class="th-soc">Kinh tế thị trường định hướng xã hội chủ nghĩa</th>
           </tr>
         </thead>
-        <tbody class="bg-white text-slate-800">
+        <tbody>
           ${comparisonTableRows
             .map(
               (r) => `
-            <tr class="hover:bg-slate-50 transition-colors">
-              <td class="font-bold text-slate-900 align-top bg-amber-50/55 border border-slate-300">${r.criteria}</td>
-              <td class="text-slate-700 align-top bg-rose-50/35 border border-slate-300">${r.capitalist}</td>
-              <td class="text-slate-900 font-semibold align-top bg-emerald-50/45 border border-slate-300">${r.socialist}</td>
+            <tr>
+              <td class="td-criteria">${r.criteria}</td>
+              <td class="td-cap">${r.capitalist}</td>
+              <td class="td-soc">${r.socialist}</td>
             </tr>
           `,
             )
@@ -91,22 +91,22 @@ window.PresentationData = (() => {
       lines: [
         "Học phần: Kinh tế chính trị Mác - Lênin",
         "Lớp học phần: SS008.R12",
-        "Đơn vị thực hiện: Nhóm 8",
+        "Nhóm thực hiện: Nhóm 8",
         "Giảng viên hướng dẫn: Nguyễn Anh Khoa",
       ],
       desc: "Mạch lập luận của bài thuyết trình đi qua 5 chặng: Bối cảnh (năm giới hạn lịch sử của chủ nghĩa tư bản) → Đường lối (khái niệm và vai trò lãnh đạo của Đảng, quản lý của Nhà nước) → Thực hiện (năm trụ cột và bảng đối chiếu) → Kết quả (bốn hạn chế và bốn giải pháp) → Phán quyết cuối cùng.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-            <h4 class="text-sky-800 font-bold">Thông tin Nhóm thực hiện &amp; Câu hỏi trọng tâm</h4>
-            <p class="text-slate-800 mt-1">
-              <strong>Nhóm 8</strong> — Lớp <strong>SS008.R12</strong> — Giảng viên hướng dẫn: <strong>Nguyễn Anh Khoa</strong>.<br/>
+          <div class="pres-subcard is-sky">
+            <h4>Thông tin Nhóm thực hiện &amp; Câu hỏi trọng tâm</h4>
+            <p>
+              <strong>Nhóm thực hiện:</strong> Nhóm 8 — Lớp <strong>SS008.R12</strong> — Giảng viên hướng dẫn: <strong>Nguyễn Anh Khoa</strong>.<br/>
               <strong>Câu hỏi trọng tâm (CQ):</strong> “Kinh tế thị trường định hướng xã hội chủ nghĩa có giải quyết được những giới hạn lịch sử của chủ nghĩa tư bản không?”
             </p>
           </div>
-          <div class="pres-subcard bg-amber-50/70 border border-amber-200">
-            <h4 class="text-amber-900 font-bold">Cấu trúc lập luận 5 chặng</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-amber">
+            <h4>Cấu trúc lập luận 5 chặng</h4>
+            <p>
               <strong>Chặng 1:</strong> Nhận diện năm giới hạn lịch sử cố hữu của chủ nghĩa tư bản.<br/>
               <strong>Chặng 2:</strong> Xác lập khái niệm và vai trò lãnh đạo của Đảng Cộng sản Việt Nam, quản lý của Nhà nước pháp quyền xã hội chủ nghĩa.<br/>
               <strong>Chặng 3:</strong> Phân tích năm phương diện thực hiện đường lối tại Việt Nam và đối chiếu hai mô hình.<br/>
@@ -136,25 +136,25 @@ window.PresentationData = (() => {
       desc: "Dù thúc đẩy mạnh mẽ lực lượng sản xuất và khoa học – kỹ thuật, chủ nghĩa tư bản bộc lộ năm giới hạn cố hữu không thể tự khắc phục trên năm phương diện: mục tiêu, sở hữu, quản lý, phân phối và công bằng xã hội.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <strong class="text-rose-800 block">Về mục tiêu phát triển:</strong>
+          <div class="pres-detail-grid">
+            <div class="pres-subcard is-rose">
+              <strong>Về mục tiêu phát triển:</strong>
               Tập trung tối đa hóa giá trị thặng dư, lợi nhuận độc quyền cho thiểu số giai cấp tư bản; khuynh hướng bành trướng gây chiến tranh, tranh giành địa chính trị – kinh tế toàn cầu.
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <strong class="text-rose-800 block">Về quan hệ sở hữu và thành phần kinh tế:</strong>
+            <div class="pres-subcard is-rose">
+              <strong>Về quan hệ sở hữu và thành phần kinh tế:</strong>
               Dựa trên chế độ chiếm hữu tư nhân tư bản chủ nghĩa về tư liệu sản xuất, mâu thuẫn gay gắt với tính chất xã hội hóa ngày càng cao của lực lượng sản xuất.
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <strong class="text-rose-800 block">Về quan hệ quản lý nền kinh tế:</strong>
+            <div class="pres-subcard is-rose">
+              <strong>Về quan hệ quản lý nền kinh tế:</strong>
               Mất cân đối vĩ mô gây khủng hoảng chu kỳ (sản xuất dư thừa so với sức mua của xã hội), lãng phí nguồn lực và không tự xử lý được ngoại ứng tiêu cực sinh thái.
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <strong class="text-rose-800 block">Về quan hệ phân phối:</strong>
+            <div class="pres-subcard is-rose">
+              <strong>Về quan hệ phân phối:</strong>
               Quy luật giá trị thặng dư và tích lũy tư bản làm tài sản tập trung vào nhóm nhỏ độc quyền, người lao động bị bóc lột, gia tăng khoảng cách giàu nghèo.
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200 md:col-span-2">
-              <strong class="text-rose-800 block">Về gắn tăng trưởng kinh tế với công bằng xã hội:</strong>
+            <div class="pres-subcard is-rose is-span-2">
+              <strong>Về gắn tăng trưởng kinh tế với công bằng xã hội:</strong>
               Phân hóa giàu nghèo sâu sắc; động cơ lợi nhuận ngắn hạn dẫn tới khai thác kiệt quệ tài nguyên thiên nhiên và xả thải gây ô nhiễm môi trường nghiêm trọng.
             </div>
           </div>
@@ -179,24 +179,24 @@ window.PresentationData = (() => {
       desc: "Kinh tế thị trường định hướng xã hội chủ nghĩa vừa tuân thủ các quy luật khách quan của kinh tế thị trường hiện đại, hội nhập quốc tế, vừa được dẫn dắt bởi bản chất và mục tiêu của chủ nghĩa xã hội theo Điều 51 Hiến pháp năm 2013.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-            <div class="pres-subcard bg-amber-50/70 border border-amber-200">
-              <h4 class="text-amber-800 font-bold">Bản chất kết hợp hai yếu tố</h4>
-              <p class="text-slate-800">
+          <div class="pres-detail-grid">
+            <div class="pres-subcard is-amber">
+              <h4>Bản chất kết hợp hai yếu tố</h4>
+              <p>
                 <strong>Tính phổ biến:</strong> Vận hành đầy đủ, đồng bộ theo quy luật giá trị, cung – cầu, cạnh tranh của kinh tế thị trường hiện đại.<br/>
                 <strong>Tính đặc thù:</strong> Được Nhà nước pháp quyền xã hội chủ nghĩa định hướng, điều tiết dưới sự lãnh đạo của Đảng Cộng sản Việt Nam.
               </p>
             </div>
-            <div class="pres-subcard bg-emerald-50/70 border border-emerald-200">
-              <h4 class="text-emerald-800 font-bold">Hiến định tại Điều 51 Hiến pháp năm 2013</h4>
-              <p class="text-slate-800">
+            <div class="pres-subcard is-emerald">
+              <h4>Hiến định tại Điều 51 Hiến pháp năm 2013</h4>
+              <p>
                 Xác định nền kinh tế Việt Nam là nền kinh tế thị trường định hướng xã hội chủ nghĩa với <strong>nhiều hình thức sở hữu, nhiều thành phần kinh tế</strong>; trong đó <strong>kinh tế nhà nước giữ vai trò chủ đạo</strong>.
               </p>
             </div>
           </div>
-          <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-            <h4 class="text-sky-800 font-bold">Quan niệm chính thức tại Văn kiện Đại hội XIII (2021):</h4>
-            <blockquote class="border-l-4 border-amber-600 pl-3 py-1 mt-1 text-slate-800 italic">
+          <div class="pres-subcard is-sky">
+            <h4>Quan niệm chính thức tại Văn kiện Đại hội XIII (2021):</h4>
+            <blockquote class="pres-quote">
               “Kinh tế thị trường định hướng xã hội chủ nghĩa là nền kinh tế thị trường hiện đại, hội nhập quốc tế, vận hành đầy đủ, đồng bộ theo các quy luật của kinh tế thị trường, có sự quản lý của Nhà nước pháp quyền xã hội chủ nghĩa, do Đảng Cộng sản Việt Nam lãnh đạo; việc phát triển nền kinh tế này phải bảo đảm định hướng xã hội chủ nghĩa vì mục tiêu <strong>‘dân giàu, nước mạnh, dân chủ, công bằng, văn minh’</strong>, phù hợp với từng giai đoạn phát triển của đất nước.”
             </blockquote>
           </div>
@@ -221,18 +221,18 @@ window.PresentationData = (() => {
       desc: "Sự kết hợp giữa vai trò lãnh đạo toàn diện của Đảng Cộng sản Việt Nam và quản lý, điều tiết của Nhà nước pháp quyền xã hội chủ nghĩa là nhân tố quyết định giúp khắc phục tính tự phát của thị trường.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-amber-50/70 border border-amber-200">
-            <h4 class="text-amber-800 font-bold">Vai trò lãnh đạo toàn diện của Đảng Cộng sản Việt Nam</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-amber">
+            <h4>Vai trò lãnh đạo toàn diện của Đảng Cộng sản Việt Nam</h4>
+            <p>
               <strong>Đề ra đường lối, chiến lược:</strong> Hoạch định cương lĩnh phát triển kinh tế luôn đi liền với tiến bộ và công bằng xã hội.<br/>
               <strong>Giữ vững mục tiêu xã hội chủ nghĩa:</strong> Ngăn ngừa tính tự phát, chạy theo lợi nhuận thuần túy, bảo đảm mục tiêu <em>“dân giàu, nước mạnh, dân chủ, công bằng, văn minh”</em>.<br/>
               <strong>Lãnh đạo hoàn thiện thể chế:</strong> Thể chế hóa quan điểm chính trị thành hệ thống pháp luật đồng bộ, minh bạch.<br/>
               <strong>Kiểm tra, giám sát và chỉnh đốn:</strong> Phòng chống tham nhũng, lãng phí, tiêu cực trong lĩnh vực kinh tế – tài chính.
             </p>
           </div>
-          <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-            <h4 class="text-sky-800 font-bold">Vai trò quản lý, điều tiết của Nhà nước pháp quyền xã hội chủ nghĩa</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-sky">
+            <h4>Vai trò quản lý, điều tiết của Nhà nước pháp quyền xã hội chủ nghĩa</h4>
+            <p>
               Hoàn thiện hệ thống pháp luật phù hợp cam kết quốc tế; bảo đảm <strong>ổn định kinh tế vĩ mô</strong>, cạnh tranh lành mạnh, giữ vững các cân đối lớn và an ninh kinh tế. Đẩy mạnh <strong>đa phương hóa, đa dạng hóa</strong> tránh lệ thuộc một thị trường và hoàn thiện <strong>hệ thống phòng vệ</strong> bảo vệ doanh nghiệp nội địa.
             </p>
           </div>
@@ -257,18 +257,18 @@ window.PresentationData = (() => {
       desc: "Khắc phục chế độ độc tôn chiếm hữu tư nhân tư bản chủ nghĩa, Việt Nam phát triển kinh tế nhiều thành phần với kinh tế nhà nước giữ vai trò chủ đạo và kinh tế tư nhân là động lực quan trọng để phục vụ số đông nhân dân.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-emerald-50/70 border border-emerald-200">
-            <h4 class="text-emerald-800 font-bold">Về mục tiêu phát triển vì con người</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-emerald">
+            <h4>Về mục tiêu phát triển vì con người</h4>
+            <p>
               Hướng tới mục tiêu “Dân giàu, nước mạnh, dân chủ, công bằng, văn minh”; phát triển lực lượng sản xuất hiện đại đi đôi với quan hệ sản xuất tiến bộ.
-              <span class="text-amber-800 font-semibold">Thực tiễn Việt Nam:</span> Tỷ lệ hộ nghèo giảm từ <strong>trên 58% (năm 1993) xuống còn dưới 3% hiện nay</strong>; chỉ số phát triển con người liên tục được cải thiện.
+              <strong>Thực tiễn Việt Nam:</strong> Tỷ lệ hộ nghèo giảm từ <strong>trên 58% (năm 1993) xuống còn dưới 3% hiện nay</strong>; chỉ số phát triển con người liên tục được cải thiện.
             </p>
           </div>
-          <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-            <h4 class="text-sky-800 font-bold">Về quan hệ sở hữu và các thành phần kinh tế</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-sky">
+            <h4>Về quan hệ sở hữu và các thành phần kinh tế</h4>
+            <p>
               Đa dạng hóa hình thức sở hữu; <strong>kinh tế nhà nước</strong> giữ vai trò chủ đạo nắm giữ ngành then chốt; <strong>kinh tế tập thể</strong> củng cố làm nền tảng; <strong>kinh tế tư nhân</strong> là một động lực quan trọng.
-              <span class="text-amber-800 font-semibold">Thực tiễn Việt Nam:</span> Doanh nghiệp nhà nước đảm nhận hạ tầng chiến lược (năng lượng, viễn thông, giao thông trọng điểm); các tập đoàn tư nhân lớn như <strong>Vingroup, FPT, Thaco</strong> đóng góp lớn vào ngân sách và tạo việc làm.
+              <strong>Thực tiễn Việt Nam:</strong> Doanh nghiệp nhà nước đảm nhận hạ tầng chiến lược (năng lượng, viễn thông, giao thông trọng điểm); các tập đoàn tư nhân lớn như <strong>Vingroup, FPT, Thaco</strong> đóng góp lớn vào ngân sách và tạo việc làm.
             </p>
           </div>
         </div>
@@ -292,18 +292,18 @@ window.PresentationData = (() => {
       desc: "Nhà nước pháp quyền xã hội chủ nghĩa sửa chữa thất bại thị trường, ngăn chặn độc quyền bất chính và phân phối lại thành quả tăng trưởng thông qua lao động và mạng lưới an sinh toàn dân.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-            <h4 class="text-sky-800 font-bold">Về quan hệ quản lý nền kinh tế</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-sky">
+            <h4>Về quan hệ quản lý nền kinh tế</h4>
+            <p>
               Nhà nước pháp quyền xã hội chủ nghĩa quản lý bằng pháp luật, chiến lược, quy hoạch và công cụ kinh tế vĩ mô trên cơ sở tôn trọng quy luật thị trường, chống thao túng của độc quyền và lợi ích nhóm.
-              <span class="text-amber-800 font-semibold">Thực tiễn Việt Nam:</span> Duy trì ổn định vĩ mô, kiểm soát lạm phát, điều tiết giá các mặt hàng thiết yếu (điện, y tế, giáo dục) qua các đợt biến động toàn cầu.
+              <strong>Thực tiễn Việt Nam:</strong> Duy trì ổn định vĩ mô, kiểm soát lạm phát, điều tiết giá các mặt hàng thiết yếu (điện, y tế, giáo dục) qua các đợt biến động toàn cầu.
             </p>
           </div>
-          <div class="pres-subcard bg-emerald-50/70 border border-emerald-200">
-            <h4 class="text-emerald-800 font-bold">Về quan hệ phân phối</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-emerald">
+            <h4>Về quan hệ phân phối</h4>
+            <p>
               Phân phối công bằng yếu tố đầu vào; phân phối đầu ra chủ yếu theo kết quả lao động, hiệu quả kinh tế, mức đóng góp vốn và thông qua hệ thống an sinh, phúc lợi xã hội.
-              <span class="text-amber-800 font-semibold">Thực tiễn Việt Nam:</span> <strong>Bảo hiểm y tế toàn dân bao phủ hơn 93% dân số</strong>, mở rộng bảo hiểm xã hội, triển khai Chương trình giảm nghèo bền vững và xây dựng nông thôn mới.
+              <strong>Thực tiễn Việt Nam:</strong> <strong>Bảo hiểm y tế toàn dân bao phủ hơn 93% dân số</strong>, mở rộng bảo hiểm xã hội, triển khai Chương trình giảm nghèo bền vững và xây dựng nông thôn mới.
             </p>
           </div>
         </div>
@@ -327,16 +327,16 @@ window.PresentationData = (() => {
       desc: "Khác với chủ nghĩa tư bản xử lý công bằng xã hội bị động ở giai đoạn sau, Việt Nam gắn kết tăng trưởng kinh tế với tiến bộ xã hội và bảo vệ môi trường ngay trong từng chính sách phát triển.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-amber-50/70 border border-amber-200">
-            <h4 class="text-amber-800 font-bold">Gắn kết ngay từ đầu — Không “tăng trưởng trước, công bằng sau”</h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-amber">
+            <h4>Gắn kết ngay từ đầu — Không “tăng trưởng trước, công bằng sau”</h4>
+            <p>
               Thực hiện tiến bộ và công bằng xã hội ngay trong từng chính sách, chiến lược, quy hoạch; tạo điều kiện bình đẳng cho mọi người dân tiếp cận dịch vụ cơ bản (giáo dục, y tế, việc làm) để tự cải thiện đời sống.
             </p>
           </div>
-          <div class="pres-subcard bg-emerald-50/70 border border-emerald-200">
-            <h4 class="text-emerald-800 font-bold">Không đánh đổi môi trường lấy tăng trưởng thuần túy</h4>
-            <p class="text-slate-800 mt-1">
-              <span class="text-amber-800 font-semibold">Thực tiễn Việt Nam:</span> Việt Nam cam kết mạnh mẽ đạt mức phát thải ròng bằng không (<strong>Net Zero</strong>) vào năm <strong>2050</strong> tại Hội nghị <strong>COP26</strong>, ban hành <strong>Luật Bảo vệ môi trường năm 2020</strong>, đẩy mạnh chuyển đổi năng lượng xanh và kinh tế tuần hoàn.
+          <div class="pres-subcard is-emerald">
+            <h4>Không đánh đổi môi trường lấy tăng trưởng thuần túy</h4>
+            <p>
+              <strong>Thực tiễn Việt Nam:</strong> Việt Nam cam kết mạnh mẽ đạt mức phát thải ròng bằng không (<strong>Net Zero</strong>) vào năm <strong>2050</strong> tại Hội nghị <strong>COP26</strong>, ban hành <strong>Luật Bảo vệ môi trường năm 2020</strong>, đẩy mạnh chuyển đổi năng lượng xanh và kinh tế tuần hoàn.
             </p>
           </div>
         </div>
@@ -382,28 +382,28 @@ window.PresentationData = (() => {
       desc: "Bên cạnh thành tựu nổi bật, thực tiễn vận hành kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam vẫn còn bốn nhóm hạn chế lớn cần thẳng thắn nhìn nhận.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <h4 class="text-rose-800 font-bold">Yếu tố xã hội chủ nghĩa chưa phát huy như mong muốn</h4>
-              <p class="text-slate-800 mt-1">
+          <div class="pres-detail-grid">
+            <div class="pres-subcard is-rose">
+              <h4>Yếu tố xã hội chủ nghĩa chưa phát huy như mong muốn</h4>
+              <p>
                 Một số mô hình hợp tác xã còn yếu kém, chưa thu hút nông dân. Quản lý Nhà nước còn hạn chế dẫn tới lũng đoạn thị trường, gian lận thương mại, hàng giả, ô nhiễm môi trường và kinh doanh đa cấp biến tướng.
               </p>
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <h4 class="text-rose-800 font-bold">Thể chế chưa theo kịp kinh tế số và công nghệ 4.0</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-rose">
+              <h4>Thể chế chưa theo kịp kinh tế số và công nghệ 4.0</h4>
+              <p>
                 Hoạt động kinh doanh trực tuyến trên mạng xã hội và nền tảng số phát triển nhanh khiến quy định pháp luật và quản lý thuế có thời điểm chưa theo kịp thực tiễn.
               </p>
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <h4 class="text-rose-800 font-bold">Môi trường kinh doanh chưa thực sự bình đẳng</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-rose">
+              <h4>Môi trường kinh doanh chưa thực sự bình đẳng</h4>
+              <p>
                 Doanh nghiệp tư nhân còn khó tiếp cận vốn, đất đai, thông tin và đấu thầu; trong khi một số doanh nghiệp nhà nước được ưu tiên nguồn lực nhưng sử dụng vốn kém hiệu quả, thua lỗ, thất thoát.
               </p>
             </div>
-            <div class="pres-subcard bg-rose-50/70 border border-rose-200">
-              <h4 class="text-rose-800 font-bold">Bất bình đẳng xã hội và quản lý kinh tế còn bất cập</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-rose">
+              <h4>Bất bình đẳng xã hội và quản lý kinh tế còn bất cập</h4>
+              <p>
                 Khoảng cách giàu nghèo giữa thành thị và nông thôn có xu hướng gia tăng (thu nhập nông dân còn thấp). Tình trạng quan liêu, tham nhũng, lãng phí và lợi ích nhóm chưa bị ngăn chặn triệt để.
               </p>
             </div>
@@ -429,28 +429,28 @@ window.PresentationData = (() => {
       desc: "Bốn giải pháp trọng tâm nhằm tháo gỡ bốn điểm nghẽn hiện nay, nâng cao hiệu lực quản lý của Nhà nước và bảo đảm công bằng xã hội.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-            <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-              <h4 class="text-sky-800 font-bold">Nâng cao quản lý Nhà nước và phát huy yếu tố xã hội chủ nghĩa</h4>
-              <p class="text-slate-800 mt-1">
+          <div class="pres-detail-grid">
+            <div class="pres-subcard is-sky">
+              <h4>Nâng cao quản lý Nhà nước và phát huy yếu tố xã hội chủ nghĩa</h4>
+              <p>
                 Giám sát chặt thị trường, xử lý nghiêm gian lận thương mại, hàng giả, đa cấp trái phép; đổi mới hợp tác xã theo hướng tự chủ, hiệu quả, gắn với nhu cầu thực tế.
               </p>
             </div>
-            <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-              <h4 class="text-sky-800 font-bold">Xây dựng thể chế phù hợp khoa học – công nghệ</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-sky">
+              <h4>Xây dựng thể chế phù hợp khoa học – công nghệ</h4>
+              <p>
                 Bổ sung quy định pháp luật cho kinh doanh nền tảng số, mạng xã hội; hoàn thiện quản lý thuế, kiểm soát giao dịch trực tuyến và bảo vệ quyền lợi người tiêu dùng.
               </p>
             </div>
-            <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-              <h4 class="text-sky-800 font-bold">Bảo đảm cạnh tranh bình đẳng giữa các thành phần kinh tế</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-sky">
+              <h4>Bảo đảm cạnh tranh bình đẳng giữa các thành phần kinh tế</h4>
+              <p>
                 Tạo điều kiện để doanh nghiệp tư nhân tiếp cận công bằng vốn, đất đai, thông tin và đầu tư. Nâng cao quản trị doanh nghiệp nhà nước, công khai tài chính và xử lý nghiêm dự án thất thoát.
               </p>
             </div>
-            <div class="pres-subcard bg-sky-50/70 border border-sky-200">
-              <h4 class="text-sky-800 font-bold">Gắn kinh tế với công bằng xã hội và chống tham nhũng</h4>
-              <p class="text-slate-800 mt-1">
+            <div class="pres-subcard is-sky">
+              <h4>Gắn kinh tế với công bằng xã hội và chống tham nhũng</h4>
+              <p>
                 Đẩy mạnh an sinh, giảm nghèo bền vững, nâng cao thu nhập nông thôn; quyết liệt phòng chống tham nhũng, quan liêu, lãng phí và lợi ích nhóm.
               </p>
             </div>
@@ -476,18 +476,16 @@ window.PresentationData = (() => {
       desc: "Phán quyết cuối cùng: Kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam đã góp phần hạn chế và khắc phục một phần những giới hạn lịch sử của chủ nghĩa tư bản, nhưng chưa thể giải quyết hoàn toàn và cần tiếp tục hoàn thiện, kiểm chứng qua thực tiễn phát triển.",
       fullHtml: `
         <div class="pres-detail-stack">
-          <div class="pres-subcard bg-amber-50/80 border-2 border-amber-400">
-            <h4 class="text-amber-900 font-bold">
-              Kết luận trả lời Câu hỏi trọng tâm (CQ):
-            </h4>
-            <p class="text-slate-800 mt-1">
+          <div class="pres-subcard is-amber">
+            <h4>Kết luận trả lời Câu hỏi trọng tâm (CQ):</h4>
+            <p>
               <strong>Trả lời:</strong> Kinh tế thị trường định hướng xã hội chủ nghĩa ở Việt Nam <strong>đã xây dựng những cơ chế nhằm khắc phục và hạn chế một phần những giới hạn của chủ nghĩa tư bản</strong> (thông qua đa dạng hóa sở hữu, phát huy vai trò quản lý – điều tiết của Nhà nước, gắn tăng trưởng với tiến bộ, công bằng xã hội và phúc lợi). Tuy nhiên, trong thực tiễn vẫn còn đối mặt với khoảng cách giàu nghèo, bất bình đẳng tiếp cận nguồn lực và hiệu quả vốn nhà nước chưa cao.<br/>
               <strong>Vì vậy:</strong> Mô hình đã góp phần hạn chế và khắc phục <strong>một phần</strong> những giới hạn lịch sử của chủ nghĩa tư bản, <strong>nhưng chưa thể giải quyết hoàn toàn</strong>; khả năng khắc phục cần tiếp tục được đánh giá và kiểm chứng qua thực tiễn phát triển.
             </p>
           </div>
-          <div class="pres-subcard bg-slate-50 border border-slate-300">
-            <h4 class="text-sky-800 font-bold mb-1">Nguồn tài liệu tham khảo chính thống (10 nguồn):</h4>
-            <ol class="list-decimal list-inside grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-1 text-slate-700 pres-ref-list">
+          <div class="pres-subcard is-neutral">
+            <h4>Nguồn tài liệu tham khảo chính thống (10 nguồn):</h4>
+            <ol class="pres-ref-list">
               <li><strong>Bộ Giáo dục và Đào tạo (2021)</strong>, <em>Giáo trình Kinh tế chính trị Mác – Lênin</em>, Nhà xuất bản Chính trị quốc gia Sự thật (Chương 5, tr. 155–171).</li>
               <li><strong>Đảng Cộng sản Việt Nam (2016)</strong>, <em>Văn kiện Đại hội đại biểu toàn quốc lần thứ XII</em>, Nhà xuất bản Chính trị quốc gia Sự thật.</li>
               <li><strong>Đảng Cộng sản Việt Nam (2021)</strong>, <em>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII</em>, Tập 1, Nhà xuất bản Chính trị quốc gia Sự thật.</li>

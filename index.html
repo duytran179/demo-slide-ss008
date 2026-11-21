@@ -24,12 +24,11 @@
         <div class="ambient-grid"></div>
       </div>
 
-      <!-- Thanh tiến trình 6 bước khớp 11 Slides (bao gồm Slide Phán quyết độc lập) -->
+      <!-- Thanh tiến trình 6 bước: Bỏ chữ "Mở", chỉ giữ lại "Đặt Vấn Đề" -->
       <header id="stage-topbar" class="stage-topbar" aria-label="Tiến trình thuyết trình">
         <div id="stage-stepper" class="stepper-track">
           <div id="stepper-glider" class="stepper-glider" aria-hidden="true"></div>
-          <button type="button" class="step-pill" data-step-stage="0" data-target-slide="0" title="Trang bìa Mở đầu (Phím 0)">
-            <span class="step-num">Mở</span>
+          <button type="button" class="step-pill is-intro-pill" data-step-stage="0" data-target-slide="0" title="Trang bìa Đặt vấn đề (Phím 0)">
             <span class="step-label">Đặt Vấn Đề</span>
           </button>
           <button type="button" class="step-pill" data-step-stage="1" data-target-slide="1">
@@ -91,8 +90,19 @@
         ✕
       </button>
 
-      <!-- Thanh trạng thái & đồng hồ 15 phút -->
-      <div id="pres-dock-shell" class="minimal-hud-wrapper">
+      <!-- Đồng hồ thời gian tách biệt, để mờ ở góc dưới bên trái màn hình -->
+      <button
+        type="button"
+        id="pres-timer-btn"
+        class="corner-timer-badge"
+        title="Phím T: Chạy/Dừng đồng hồ • Nhấp đúp: Đặt lại"
+      >
+        <span class="timer-dot"></span>
+        <span id="pres-timer-display">00:00</span>
+      </button>
+
+      <!-- Thanh trạng thái tự động ẩn sau 3,5 giây (hiện lại khi chuyển slide) -->
+      <div id="pres-dock-shell" class="minimal-hud-wrapper is-visible">
         <div
           id="pres-top-bar"
           role="toolbar"
@@ -107,18 +117,6 @@
 
           <button type="button" id="btn-hud-next" class="hud-nav-btn" aria-label="Slide tiếp theo" title="Slide tiếp theo">
             ›
-          </button>
-
-          <span class="hud-sep"></span>
-
-          <button
-            type="button"
-            id="pres-timer-btn"
-            class="hud-timer"
-            title="Phím T: Chạy/Dừng đồng hồ • Nhấp đúp: Đặt lại"
-          >
-            <span class="timer-dot"></span>
-            <span id="pres-timer-display">00:00</span>
           </button>
 
           <span class="hud-sep"></span>
