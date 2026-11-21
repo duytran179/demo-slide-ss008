@@ -52,23 +52,23 @@ window.PresentationData = (() => {
   ];
 
   const comparisonTableHtml = `
-    <div class="matrix-scroll-guard rounded-xl border border-slate-300 bg-white shadow-sm">
-      <table class="pres-comp-table w-full text-left border-collapse">
+    <div class="matrix-scroll-guard rounded-xl border-2 border-slate-400 bg-white shadow-md">
+      <table class="pres-comp-table w-full text-left border-collapse border border-slate-400">
         <thead>
-          <tr class="bg-slate-900 text-white border-b border-slate-300">
-            <th class="font-extrabold text-amber-400 w-[23%]">Tiêu chí so sánh</th>
-            <th class="font-extrabold text-rose-300 w-[38.5%] border-l border-slate-700">Kinh tế thị trường tư bản chủ nghĩa</th>
-            <th class="font-extrabold text-emerald-300 w-[38.5%] border-l border-slate-700">Kinh tế thị trường định hướng xã hội chủ nghĩa</th>
+          <tr class="bg-slate-900 text-white">
+            <th class="font-extrabold text-amber-400 w-[23%] border border-slate-600">Tiêu chí so sánh</th>
+            <th class="font-extrabold text-rose-300 w-[38.5%] border border-slate-600">Kinh tế thị trường tư bản chủ nghĩa</th>
+            <th class="font-extrabold text-emerald-300 w-[38.5%] border border-slate-600">Kinh tế thị trường định hướng xã hội chủ nghĩa</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-slate-200 bg-white text-slate-800">
+        <tbody class="bg-white text-slate-800">
           ${comparisonTableRows
             .map(
               (r) => `
             <tr class="hover:bg-slate-50 transition-colors">
-              <td class="font-bold text-slate-900 align-top bg-amber-50/40">${r.criteria}</td>
-              <td class="text-slate-700 border-l border-slate-200 align-top bg-rose-50/25">${r.capitalist}</td>
-              <td class="text-slate-900 font-semibold border-l border-slate-200 align-top bg-emerald-50/40">${r.socialist}</td>
+              <td class="font-bold text-slate-900 align-top bg-amber-50/55 border border-slate-300">${r.criteria}</td>
+              <td class="text-slate-700 align-top bg-rose-50/35 border border-slate-300">${r.capitalist}</td>
+              <td class="text-slate-900 font-semibold align-top bg-emerald-50/45 border border-slate-300">${r.socialist}</td>
             </tr>
           `,
             )
@@ -459,13 +459,13 @@ window.PresentationData = (() => {
       `,
     },
 
-    // ================= SLIDE 11: CHẶNG 5 — PHÁN QUYẾT CUỐI CÙNG =================
+    // ================= SLIDE 11: CHẶNG 5 — PHÁN QUYẾT CUỐI CÙNG (SLIDE ĐỘC LẬP) =================
     {
       id: "r3-verdict",
       room: 3,
       badge: "Chặng 5: Phán Quyết Cuối Cùng • Kết Luận Khoa Học",
       title: "Phán Quyết Cuối Cùng Về Câu Hỏi Trọng Tâm",
-      subtitle: "Kinh tế thị trường định hướng xã hội chủ nghĩa có giải quyết được giới hạn lịch sử của chủ nghĩa tư bản?",
+      subtitle: "“Kinh tế thị trường định hướng xã hội chủ nghĩa có giải quyết được những giới hạn lịch sử của chủ nghĩa tư bản không?”",
       color: "#d97706",
       lines: [
         "Đã khắc phục và hạn chế một phần căn bản những giới hạn lịch sử của chủ nghĩa tư bản.",
